@@ -1,0 +1,26 @@
+wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz
+tar -xvzf geckodriver-v*
+chmod +x geckodriver
+sudo cp geckodriver /usr/local/bin/
+
+yum install epel-release -y
+yum install -y firefox xorg-x11-server-Xvfb xorg-x11-xauth java-1.6.0-openjdk perl-Test-WWW-Selenium perl-XML-XPath python-pip
+pip install virtualenv
+pip install selenium 
+pip install os
+
+
+example python code
+++++++++++++++
+
+import os
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
+from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
+from selenium import webdriver
+import os
+os.environ['MOZ_HEADLESS'] = '1'
+binary = FirefoxBinary('/usr/lib64/firefox/firefox', log_file=sys.stdout)
+browser = webdriver.Firefox(firefox_binary=binary)
+browser.get("https://www.saturnme.com/").
