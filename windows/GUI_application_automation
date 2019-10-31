@@ -1,0 +1,28 @@
+
+Windows Application automation:
+++++++++++++++++++++++++++++++++
+
+1. pip install pywinauto
+
+2. Then download swapy from the below website
+
+https://github.com/pywinauto/SWAPY/releases/tag/0.4.8
+
+Swapy is used to automate the python code with pywinauto. we dont need to write the python code.
+
+
+sample calculator code :
+
+from pywinauto.application import Application
+app = Application().Start(cmd_line=u'"C:\\Windows\\system32\\win32calc.exe" ')
+calcframe = app.CalcFrame
+calcframe.Wait('ready')
+button = calcframe.Button14
+button.Click()
+button2 = calcframe.Button21
+button2.Click()
+button3 = calcframe.Button16
+button3.Click()
+button4 = calcframe.Button28
+button4.Click()
+app.Kill_()
