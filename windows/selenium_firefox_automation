@@ -1,0 +1,19 @@
+1. Install firefox
+2. Install python 3, enable the path while install python
+3. Install selenium
+    pip install selenium
+    
+4. Downlaod the geckodriver from the below link
+https://github.com/mozilla/geckodriver/releases/tag/v0.23.0
+
+Some times there is issue with geckodriver. at that time you can use different geckodrive 
+
+
+++++++++++++++++++++++++++++++++++
+Then run the command in powershell
+++++++++++++++++++++++++++++++++++
+
+
+
+
+
